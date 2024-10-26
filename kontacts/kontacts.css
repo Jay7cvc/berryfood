@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.header {
+    padding-top: 100px;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Onest;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.6s;
+    padding-top: 25px;
+    background-color: #9c9976;
+}
+
+.navbar.sticky {
+    background-color: #9c9976;
+    box-shadow: -28px 0px 28px #9C9976;
+    padding: 5px 5px 5px 5px;
+    border-bottom: 1px solid #fff;
+    max-width: 100%;
+}
+
+.navbar.sticky ul li a:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    margin-right: 60px;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    transition: 0.6s;
+    text-shadow: 0px 3px 4px #9c9976;
+    transition: 0.5s ease, transform 0.3s ease;
+}
+
+.nav-list li .ru {
+    border-radius: 35px;
+    background-color: black;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.nav-list li a:hover {
+    border-bottom: 1px solid #9c9976;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.kontacts-lists {
+    color: black;
+}
+
+.kontacts-lists h1 {
+    font-size: 56px;
+    font-weight: 300;
+}
+
+.kontacts-lists table {
+    max-width: 1200px;
+}
+
+.kontacts-lists table tr td:last-child {
+    padding-left: 500px;
+}
+
+.kontacts-lists table tr td h3 {
+    font-size: 32px;
+    font-weight: 350;
+    margin-bottom: 0;
+}
+
+.telefony {
+    margin-top: 75px;
+}
+
+.kontacts-lists table tr td p {
+    font-family: Onest;
+    line-height: 30px;
+    font-size: large;
+}
+
+.numbers {
+    display: flex;
+    align-items: center;
+}
+
+.numbers img {
+    padding-right: 10px;
+}
+
+.b {
+    font-size: large;
+}
+
+.text-kontact {
+    margin-top: 100px;
+    font-family: Onest;
+}
+
+.text-kontact p {
+    font-size: larger;
+    font-weight: 400;
+}
+
+.text-kontact ul li {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.text-kontact ul li p {
+    font-family: Onest;
+    font-size: large;
+}
+
+.karta {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    box-shadow: 0px -3px 28px #9C9976;
+    transition: all 2s;
+}
+
+.karta:hover {
+    animation: pulsate 3s infinite;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 10px rgba(180, 69, 69, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 15px rgba(106, 121, 51, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(228, 186, 0, 0.5);
+    }
+    75% {
+        box-shadow: 0 0 15px rgba(238, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    }
+}
+
+.footer {
+    background-color: #9C9976;
+    box-shadow: 0px -3px 28px #9C9976;
+    color: #fff;
+}
+
+.footer .two-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .two-list ul {
+    list-style: none;
+}
+
+.footer .two-list p {
+    margin-top: 130px;
+}
+
+.footer .two-list ul:last-child {
+    list-style: none;
+    text-align: end;
+}
+
+.footer .two-list ul li h2 {
+    font-weight: 500;
+    font-size: 25px;
+}
