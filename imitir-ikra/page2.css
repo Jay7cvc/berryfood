@@ -306,6 +306,7 @@ article table tr td img:hover {
 
 .footer .two-list ul {
     list-style: none;
+    line-height: 30px;
 }
 
 .footer .two-list p {
