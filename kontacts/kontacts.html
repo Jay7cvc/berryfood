@@ -34,73 +34,174 @@
         <div class="container">
             <section class="kontacts-lists">
                 <h1>Контакты</h1>
-                <table>
-                    <tr>
-                        <td>
+
+                <div class="box-list-1">
+
+
+
+                    <div class="ul-box">
+                        <ul>
+
+                            <li>
+                                <div class="box-contact">
+                                    <img src="../img/Businessman.png">
+                                    <h3 class="kntk">
+                                        По вопросам экспорта<br>
+                                        Орлов Андрей Валерьевич
+                                    </h3>
+
+                                </div>
+
+                                <div class="infa-box1">
+
+                                    <div class="boxik">
+                                        <img src="../img/Mail.png">
+                                        <p>e-mail: export@e-okeana.ru</p><br>
+                                    </div>
+
+                                    <div class="boxik">
+                                        <img src="../img/Phone.png">
+                                        <p>тел.гор: +375 (17) 399-00-00</p><br>
+                                    </div>
+
+                                    <div class="boxik">
+                                        <img src="../img/Phone.png">
+                                        <p>тел.моб. +375 29 637-18-63</p>
+                                    </div>
+                                </div>
+
+
+                            </li>
+                        </ul>
+
+                        <ul>
+
+                            <li>
+                                <div class="box-contact">
+                                    <img src="../img/Businesswoman.png">
+                                    <h3 class="kntk">
+                                        По вопросам на территории РБ<br>
+                                        Шевель Мария Николаевна (РБ)
+                                    </h3>
+
+                                </div>
+
+                                <div class="infa-box1">
+                                    <div class="boxik">
+                                        <img src="../img/Mail.png">
+                                        <p>e-mail: algafood.office@mail.ru</p><br>
+                                    </div>
+
+                                    <div class="boxik">
+                                        <img src="../img/Phone.png">
+                                        <p>тел.моб +375 (17) 399-00-00</p><br>
+                                    </div>
+
+                                    <div class="boxik">
+                                        <img src="../img/Phone.png">
+                                        <p>тел.моб +375 44 585 05 15</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="forma-numb">
+
+
+                    <ul class="ootelefons">
+                        <li>
                             <h3>Адрес</h3>
-                            <p>Республика Беларусь, Минск,<br>
+                            <p class="bs-p">Республика Беларусь, Минск,<br>
                                 220028, ул. Полтавская, 10,<br>
                                 офис 203
                             </p>
+                        </li>
 
+                        <li>
                             <div class="telefony">
                                 <h3>Телефон</h3>
-                                <p class="numbers">
-                                    <img src="../img/Belarus.png">
-                                    В Минске: +375 (17) 399-00-00<br>
-                                </p>
-                                <p class="numbers">
-                                    <img src="../img/Russian Federation.png">
-                                    В Москве: + 7 926 022 92 49
-                                </p>
+                                <a href="tel: +375173990000" class="numbers1">
+                                    <p>В Минске: +375 (17) 399-00-00</p>
+                                </a>
+                                <a href="tel: +79260229249" class="numbers2">
+                                    <p>В Москве: + 7 926 022 92 49</p>
+                                </a>
                             </div>
-                        </td>
+                        </li>
+                    </ul>
 
-                        <td>
-                            <h3 class="kntk">Контакты</h3>
+                    <div class="contact-form">
+                        <div class="title">Свяжитесь с нами</div>
+                        <button type="submit" class="close-btn"
+                            onclick="alert('Сообщение отправлено');">Отправить</button>
 
-                            <b class="b">Орлов Андрей Валерьевич<br>(экспорт)</b>
-                            <p>e-mail: export@e-okeana.ru<br>
-                                тел.гор: +375 (17) 399-00-00<br>
-                                тел.моб. +375 29 637-18-63
-                            </p>
+                        <div class="field">
+                            <label for="fio">ФИО</label>
+                            <input type="text" id="fio" name="fio" required>
+                        </div>
 
-                            <b class="b">Шевель Мария Николаевна (РБ)</b><br>
-                            <p>e-mail: algafood.office@mail.ru<br>
-                                тел.моб +375 44 585 05 15
-                            </p>
-                        </td>
-                    </tr>
-                </table>
+                        <div class="field">
+                            <label for="email">e-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="field-message">
+                            <label for="message">Ваше сообщение</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2353.012512952348!2d27.560896576103776!3d53.86042543613544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd1c97ff4ec4d%3A0x4b17111fe8d3fe9!2sUlitsa%20Poltavskaya%2010%2C%20Minsk%2C%20Minskaja%20voblas%C4%87!5e0!3m2!1sen!2sby!4v1731800847074!5m2!1sen!2sby"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="karta">
+                </iframe>
+
                 <div class="text-kontact">
-                    <p>
+                    <h2 class="text-contact-h">
                         Компания ориентирована на
                         развитие плодотворного сотрудничества
                         с партнерами и клиентами
-                    </p>
+                    </h2>
 
-                    <ul>
+                    <ul class="text-contact-ul">
                         <li>
-                            Маркетинговая поддержка, проведение и участие в акциях 
-                            направленных на увеличение продаж (промо-акций, дегустаций).
+                            <div class="group">
+                                <img src="../img/chekbox.png">
+                                <p>Маркетинговая поддержка, проведение u участие в акциях 
+                                направленных на увеличение продаж (промо-акций, дегустаций).</p>
+                            </div>
+                        </li>
+
+
+                        <li>
+                            <div class="group">
+                                <img src="../img/chekbox.png">
+                                <p>Индивидуальный подход к клиенту, гибкая система скидок.</p>
+                            </div>
                         </li>
 
                         <li>
-                            Индивидуальный подход к клиенту, гибкая система скидок.
+                            <div class="group">
+                                <img src="../img/chekbox.png">
+                                <p>Доставка продукции в любой регион РБ и за пределы страны.</p>
+                            </div>
                         </li>
 
                         <li>
-                            Доставка продукции в любой регион РБ и за пределы страны.
-                        </li>
-
-                        <li>
-                            Разработка, регистрация и производство новой продукции по Вашим заказам.
+                            <div class="group">
+                                <img src="../img/chekbox.png">
+                                <p>Разработка, регистрация и производство новой продукции по Вашим заказам.</p>
+                            </div>
                         </li>
                     </ul>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253109.99999692438!2d27.48352!3d53.90225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fb5e8c978c2afb%3A0x6d9743156d9ae5c2!2z0YPQuy4g0JPQuNC10L3QuNGH0LDRg9C10LzRgtC-0LDRg9GA0LvQu9C40L3Qu9Cw!5e0!3m2!1sru!2sby!4v1631938279651!5m2!1sru!2sby"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        class="karta"></iframe>
                 </div>
             </section>
         </div>
