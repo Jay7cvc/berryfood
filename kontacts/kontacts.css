@@ -41,7 +41,8 @@ h5 {
     justify-content: space-between;
     align-items: center;
     transition: all 0.6s;
-    padding-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: #9c9976;
 }
 
