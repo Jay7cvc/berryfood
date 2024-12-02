@@ -169,6 +169,8 @@ h5 {
 .production {
     background-color: #9C9976;
     color: #fff;
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
 .production h2 {
