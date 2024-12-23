@@ -207,26 +207,30 @@ h5 {
 
 .image-container {
     position: relative;
-    width: 240px; 
+    width: 240px;
     height: 340px;
     overflow: hidden;
 }
+
 .image-container img {
     position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.8s ease, box-shadow 0.8s ease; 
+    transition: opacity 0.8s ease, box-shadow 0.8s ease;
 }
+
 .image-container img.second {
     opacity: 0;
 }
+
 .image-container:hover img.first {
     opacity: 0;
-    box-shadow: -10px -11px 34px #9C9976; 
+    box-shadow: -10px -11px 34px #9C9976;
 }
+
 .image-container:hover img.second {
     opacity: 1;
-    box-shadow: -10px -11px 34px #9C9976; 
+    box-shadow: -10px -11px 34px #9C9976;
 }
 
 .image-container:hover {
@@ -366,4 +370,264 @@ article table tr td img:hover {
 .footer .two-list ul li h2 {
     font-weight: 500;
     font-size: 25px;
+}
+
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0
+}
+
+.burger::after {
+    bottom: 0
+}
+
+.burger.active span {
+    transform: scale(0)
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media (max-width: 720px) {
+
+    .burger {
+        display: flex;
+        width: 35px;
+        height: 23px;
+        margin-right: 10px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: rgb(255, 255, 255);
+        animation: burgerAnimation 0.4s;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .contact-with-us {
+        padding: 27px 100px 27px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .production ul {
+        display: block;
+        text-align: center;
+    }
+
+    .production ul li img {
+        width: 365px;
+        height: 293px;
+        margin-top: 30px;
+    }
+
+    .proizvodstvo table tr td img {
+        display: none;
+    }
+
+    .proizvodstvo table tr td p {
+        font-size: 17px;
+        padding-bottom: 5px;
+    }
+
+    .article-1 {
+        font-family: Onest;
+        font-size: 5vw;
+        font-weight: 250;
+        line-height: 33px;
+        margin-bottom: 25px;
+    }
+
+    #production {
+        padding-top: 23px;
+    }
+
+    .about article {
+        font-size: 20px;
+    }
+
+    .title-1 {
+        font-size: 13vw;
+        font-weight: 500;
+    }
+
+    .contact-with-us {
+        font-size: 20px;
+        line-height: 0;
+    }
+
+    .table-two tr {
+        display: flex;
+        flex-direction: column;
+        width: 10vh;
+    }
+
+    .table-two tr img {
+        width: 88vw;
+    }
+
+    .table-two tr td:last-child {
+        margin-top: 75px;
+    }
+
+    .vidy-tary ul li .image-container {
+        display: flex;
+        flex-direction: column;
+        column-gap: 5%;
+    }
+
+
+    .vidy-tary ul {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        align-items: stretch;
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .first {
+        width: 38vw;
+        height: 55vw;
+    }
+
+    .second {
+        width: 38vw;
+        height: 55vw;
+    }
+
+    .image-container {
+        position: relative;
+        width: 38vw;
+        height: 55vw;
+        overflow: hidden;
+    }
+
+    article .container table tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo-article {
+        width: 88vw;
+        margin-left: 0;
+    }
+
+    .title-imitr-ikra h1 {
+        font-size: 10vw;
+    }
+
+    .header-nv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item-nv {
+        width: 30vw;
+    }
+
+    .title-imitr-ikra .table-one td:first-child {
+        height: 38em;
+    }
+
+    .footer .two-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .two-list ul:last-child {
+        text-align: start;
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list ul {
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list p {
+        margin-top: 41px;
+    }
+
+    /*.vidy-tary ul li {
+        width: 20vw;
+        height: 25vw;
+    }*/
+}
+
+@media (max-width: 412px) {
+    .title-imitr-ikra .table-one td:first-child {
+        height: 42em;
+    }
+}
+
+@media (max-width: 364px) {
+    .title-imitr-ikra .table-one td:first-child {
+        height: 45em;
+    }
 }
