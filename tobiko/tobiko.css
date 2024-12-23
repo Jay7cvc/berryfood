@@ -183,8 +183,8 @@ h5 {
 }
 
 .section2-ul {
-   margin-top: 27px;
-   padding-left: 0;
+    margin-top: 27px;
+    padding-left: 0;
 }
 
 .section2-ul li {
@@ -230,4 +230,119 @@ h5 {
 .footer .two-list ul li h2 {
     font-weight: 500;
     font-size: 25px;
+}
+
+@media (max-width: 720px) {
+
+    .burger {
+        display: flex;
+        width: 35px;
+        height: 23px;
+        margin-right: 10px;
+    }
+
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: rgb(255, 255, 255);
+        animation: burgerAnimation 0.4s;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .item-nv {
+        width: 30vw;
+    }
+
+    .item-nv {
+        width: 30vw;
+        background-color: #ffffff;
+        padding: 10px 10px 10px 10px;
+        border-radius: 25px;
+    }
+
+    .title-imitr-ikra .table-one td img {
+        position: absolute;
+        top: -50px;
+        right: 0px;
+        z-index: -100;
+    }
+
+    .title-imitr-ikra h1 {
+        margin-top: 185px;
+        font-size: 23vw;
+    }
+
+    .title-imitr-ikra p {
+        color: black;
+        font-family: Onest;
+        margin-top: 133px;
+        width: 320px;
+    }
+
+    .section-h3 {
+        font-family: Onest;
+        font-size: 10vw;
+        font-weight: 500;
+        margin-top: 203px;
+    }
+
+    .gallery img {
+        display: none;
+    }
+
+    .section2-ul li img {
+        width: 50px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section2-ul li p {
+        margin-top: 0;
+    }
+
+    .footer .two-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .two-list ul:last-child {
+        text-align: start;
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list ul {
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list p {
+        margin-top: 41px;
+    }
+
+    .box-photo {
+        padding-left: 0;
+    }
+
+    .section1 ul li {
+        margin-top: 24px;
+    }
 }
