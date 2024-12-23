@@ -26,10 +26,11 @@
                 <li><a href="../kontacts/kontacts.html">Контакты</a></li>
                 <li><a href="#ru" class="ru">RU</a></li>
             </ul>
+            <div class="burger">
+                <span></span>
+            </div>
         </nav>
-        <div class="burger">
-            <span></span>
-        </div>
+
 
         <div class="container">
             <section class="section-hader">
@@ -96,7 +97,7 @@
                         <div>
                             <p class="primen">
                                 <b>Гарниров для морепродуктов и<br>
-                                суши:</b> прекрасное сочетание с<br>
+                                    суши:</b> прекрасное сочетание с<br>
                                 рыбой и другими морскими продуктами
                             </p>
                         </div>
@@ -128,20 +129,33 @@
             </table>
         </section>
     </div>
-    <footer class="footer"> 
+    <footer class="footer">
         <div class="container">
             <div class="two-list">
                 <ul>
-                    <li><h2>Контакты</h2></li>
+                    <li>
+                        <h2>Контакты</h2>
+                    </li>
                     <li>Телефон в Минске: +375 (17) 399-00-00</li>
                     <li>Телефон в Москве: + 7 926 022 92 49</li>
                 </ul>
                 <p>© 2011 - 2024 E-okeana.by</p>
                 <ul>
-                    <li><h2>Адрес</h2></li>
+                    <li>
+                        <h2>Адрес</h2>
+                    </li>
                     <li>Республика Беларусь, Минск</li>
                     <li>220028, ул. Полтавская, 10, офис 203</li>
                 </ul>
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
+</body>
+
+</html>
