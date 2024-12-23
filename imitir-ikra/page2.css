@@ -586,11 +586,15 @@ article table tr td img:hover {
 
     .item-nv {
         width: 30vw;
+        background-color: #ffffff;
+        padding: 10px 10px 10px 10px;
+        border-radius: 25px;
+        border: 0.5px solid black;
     }
 
-    .title-imitr-ikra .table-one td:first-child {
+    /*.title-imitr-ikra .table-one td:first-child {
         height: 38em;
-    }
+    }*/
 
     .footer .two-list {
         display: flex;
