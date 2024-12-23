@@ -331,7 +331,7 @@ ul li h3 {
 }
 
 .contact-form:hover {
-    animation: pulsate2 3s infinite;  
+    animation: pulsate2 3s infinite;
 }
 
 @keyframes pulsate2 {
@@ -462,4 +462,172 @@ textarea {
 .text-contact-ul {
     list-style: none;
     padding-left: 0;
+}
+
+
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0
+}
+
+.burger::after {
+    bottom: 0
+}
+
+.burger.active span {
+    transform: scale(0)
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+@media (max-width: 720px) {
+
+    .burger {
+        display: flex;
+        width: 35px;
+        height: 23px;
+        margin-right: 20px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: rgb(255, 255, 255);
+        animation: burgerAnimation 0.4s;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .contact-with-us {
+        padding: 27px 100px 27px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #production {
+        padding-top: 23px;
+    }
+
+    .about article {
+        font-size: 20px;
+    }
+
+    .title-1 {
+        font-size: 13vw;
+        font-weight: 500;
+    }
+
+    .contact-with-us {
+        font-size: 20px;
+        line-height: 0;
+    }
+
+    .ul-box {
+        flex-direction: column;
+    }
+
+    .forma-numb {
+        flex-direction: column;
+    }
+
+    .box-list-1 ul {
+        margin: 0;
+        margin-bottom: 35px;
+        padding: 0;
+    }
+
+    .ootelefons {
+        margin-top: 0;
+    }
+
+    .contact-form {
+        width: 428px;
+    }
+
+    .text-contact-h {
+        font-size: 33px;
+    }
+
+    .footer .two-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .two-list ul:last-child {
+        text-align: start;
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list ul {
+        padding-left: 0;
+        margin-top: 6px;
+        line-height: 25px;
+    }
+
+    .footer .two-list p {
+        margin-top: 41px;
+    }
+
+}
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
