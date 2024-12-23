@@ -26,22 +26,24 @@
                 <li><a href="kontacts/kontacts.html">Контакты</a></li>
                 <li><a href="#ru" class="ru">RU</a></li>
             </ul>
+            <div class="burger">
+                <span></span>
+            </div>
         </nav>
-        <div class="burger">
-            <span></span>
-        </div>
+
 
 
         <div class="container">
             <section class="section-hader">
-                <h3 class="title-1">Производство<br> альгиновой<br> икры</h3>
+                <h3 class="title-1">Производство <br> альгиновой <br> икры</h3>
                 <article class="article-1">
                     Мы предлагаем натуральный, вкусный и полезный<br>
                     продукт, который высоко ценят наши потребители.<br>
                     Гордимся тем, что наша продукция востребована<br>
                     на международных рынках.</article>
             </section>
-            <a href="kontacts/kontacts.html" class="contact-with-us">Связаться с нами</a>
+            <a href="kontacts/kontacts.html" class="contact-with-us">
+                Связаться <div class="pumsvz">с нами</div></a>
         </div>
     </header>
     <section class="about" id="about">
@@ -72,14 +74,14 @@
                 </li>
 
                 <li>
-                    <a href="s-kremom/s-kremom.html">
+                    <a href="../BerryFood2/s-kremom/s-kremom.html">
                         <img src="img/ikrakrem.png" class="krem-ikra-img">
                     </a>
                     <p>Имитированная<br>икра с кремом</p>
                 </li>
 
                 <li>
-                    <a href="tobiko/tobiko.html">
+                    <a href="../BerryFood2/tobiko/tobiko.html">
                         <img src="img/horeca.png">
                     </a>
                     <p>Имитированная<br> Тобико<br></p>
@@ -138,7 +140,12 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 
