@@ -232,7 +232,125 @@ h5 {
     font-size: 25px;
 }
 
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0
+}
+
+.burger::after {
+    bottom: 0
+}
+
+.burger.active span {
+    transform: scale(0)
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
 @media (max-width: 720px) {
+    .navbar {
+        background-color: #9c9976;
+        padding: 10px 8px 10px 8px;
+        border-bottom: 1px solid #fff;
+        max-width: 100%;
+    }
+    
+    .nav-list {
+        display: none; /* Скрыто по умолчанию */
+    }
+
+    .nav-list.active {
+        display: flex;
+        position: fixed;
+        top: 79px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        background-color: rgb(62 64 44 / 53%);
+        animation: burgerAnimation 0.4s;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        margin-bottom: 0;
+        transition: all 0.3s;
+    }
+
+    .sticki.active {
+        display: flex;
+        position: fixed;
+        top: 70px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        background-color: rgb(62 64 44 / 53%);
+        animation: burgerAnimation 0.4s;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .nav-list ul {
+        overflow-y: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list li a {
+        overflow-y: auto;
+        margin-right: 0;
+        font-size: 6vw;
+        font-weight: 100;
+        padding: 10px 13px 10px 13px;
+        background-color: rgba(48, 48, 48, 0.671);
+        border-radius: 25px;
+        box-shadow: #494943 15px 5px 10px;
+    }
 
     .burger {
         display: flex;
@@ -242,27 +360,48 @@ h5 {
     }
 
 
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        height: 100%;
-        width: 100%;
+    .burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+    .burger::before {
         top: 0;
+    }
+    .burger::before, .burger::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #FAF6F2;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+    .burger::after {
         bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        padding: 50px 40px;
-        background-color: rgb(255, 255, 255);
-        animation: burgerAnimation 0.4s;
+    }
+    .burger::before, .burger::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #FAF6F2;
+        transition: all 0.3s ease 0s;
+    }
+
+    .navbar.active {
+        display: block;
+        /* Показываем меню */
     }
 
     .nav ul {
         flex-direction: column;
         row-gap: 30px;
     }
+
 
     .item-nv {
         width: 30vw;
@@ -273,6 +412,7 @@ h5 {
         background-color: #ffffff;
         padding: 10px 10px 10px 10px;
         border-radius: 25px;
+        border: 0.5px solid black;
     }
 
     .title-imitr-ikra .table-one td img {
@@ -298,7 +438,7 @@ h5 {
         font-family: Onest;
         font-size: 10vw;
         font-weight: 500;
-        margin-top: 203px;
+        margin-top: 250px;
     }
 
     .gallery img {
@@ -344,5 +484,15 @@ h5 {
 
     .section1 ul li {
         margin-top: 24px;
+    }
+}
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
     }
 }
