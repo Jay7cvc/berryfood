@@ -20,13 +20,13 @@
     <header class="header">
         <nav class="navbar">
             <img src="../img/Frame.png" class="logo-BF">
-            <ul class="nav-list">
+            <ul id="nav-list" class="nav-list">
                 <li><a href="../index.html">Главная</a></li>
                 <li><a href="../index.html#production">Продукция</a></li>
                 <li><a href="../kontacts/kontacts.html">Контакты</a></li>
                 <li><a href="#ru" class="ru">RU</a></li>
             </ul>
-            <div class="burger">
+            <div id="burger" class="burger">
                 <span></span>
             </div>
         </nav>
@@ -137,27 +137,8 @@
                             </div>
                         </li>
                     </ul>
-
-                    <div class="contact-form">
-                        <div class="title">Свяжитесь с нами</div>
-                        <button type="submit" class="close-btn"
-                            onclick="alert('Сообщение отправлено');">Отправить</button>
-
-                        <div class="field">
-                            <label for="fio">ФИО</label>
-                            <input type="text" id="fio" name="fio" required>
-                        </div>
-
-                        <div class="field">
-                            <label for="email">e-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="field-message">
-                            <label for="message">Ваше сообщение</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                    </div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQeeyW-6SGwEBeVXXoqpMtUFRBKIylvPZBCK-cY-4Rsai-xQ/viewform?embedded=true" width="470px" height="275px" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+                    
                 </div>
 
                 <iframe
@@ -215,7 +196,7 @@
                         <h2>Контакты</h2>
                     </li>
                     <li>Телефон в Минске: +375 (17) 399-00-00</li>
-                    <li>Телефон в Москве: + 7 926 022 92 49</li>
+                    <li>Телефон в Москве: + 7 926 022-92-49</li>
                 </ul>
                 <p>© 2011 - 2024 E-okeana.by</p>
                 <ul>
@@ -228,6 +209,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         document.querySelector('.burger').addEventListener('click', function() {
             this.classList.toggle('active');
