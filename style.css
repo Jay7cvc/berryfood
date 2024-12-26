@@ -13,7 +13,7 @@ body {
 
 .header {
 
-    background-image: url('img/background-1.png');
+    background-image: url('../BerryFood/img/background-1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -119,6 +119,7 @@ h5 {
 }
 
 .contact-with-us {
+    display: inline-flex;
     position: relative;
     height: 71px;
     padding: 10px 100px 10px 100px;
@@ -139,6 +140,10 @@ h5 {
     box-shadow: 2px 12px 20px #9C9976;
     text-shadow: 0 1px 2px #030303b4;
     opacity: 0.9;
+}
+
+.pumsvz {
+    margin-left: 5px;
 }
 
 .about {
@@ -319,7 +324,99 @@ h5 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.open {
+    display: flex !important;
+}
+
+
 @media (max-width: 720px) {
+
+    .navbar {
+        background-color: #9c9976;
+        padding: 10px 8px 10px 8px;
+        border-bottom: 1px solid #fff;
+        max-width: 100%;
+    }
+    
+    .nav-list {
+        display: none; /* Скрыто по умолчанию */
+    }
+
+    .nav-list.active {
+        display: flex;
+        position: fixed;
+        top: 79px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        background-color: rgb(62 64 44 / 53%);
+        animation: burgerAnimation 0.4s;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        margin-bottom: 0;
+        transition: all 0.3s;
+    }
+
+    .sticki.active {
+        display: flex;
+        position: fixed;
+        top: 70px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        background-color: rgb(62 64 44 / 53%);
+        animation: burgerAnimation 0.4s;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .nav-list ul {
+        overflow-y: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-list li a {
+        overflow-y: auto;
+        margin-right: 0;
+        font-size: 6vw;
+        font-weight: 100;
+        padding: 10px 13px 10px 13px;
+        background-color: rgba(48, 48, 48, 0.671);
+        border-radius: 25px;
+        box-shadow: #494943 15px 5px 10px;
+    }
+
+
+
+
+
+
 
     .burger {
         display: flex;
@@ -329,21 +426,41 @@ h5 {
     }
 
 
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        height: 100%;
-        width: 100%;
+    .burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+    .burger::before {
         top: 0;
+    }
+    .burger::before, .burger::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #FAF6F2;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+    .burger::after {
         bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        padding: 50px 40px;
-        background-color: rgb(255, 255, 255);
-        animation: burgerAnimation 0.4s;
+    }
+    .burger::before, .burger::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: #FAF6F2;
+        transition: all 0.3s ease 0s;
+    }
+
+    .navbar.active {
+        display: block;
+        /* Показываем меню */
     }
 
     .nav ul {
